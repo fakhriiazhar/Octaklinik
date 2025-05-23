@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "459739357836",
+    "project_id": "octaklinik",
+    "storage_bucket": "octaklinik.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459739357836:android:9cb037fe055dff3f7791a9",
+        "android_client_info": {
+          "package_name": "com.example.app_octaklinik"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNQZjEcmSU2DaBsb8aB5xC7TNKgZ5iI2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459739357836:android:0ee38cdaf290eb3f7791a9",
+        "android_client_info": {
+          "package_name": "com.octaklinik.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNQZjEcmSU2DaBsb8aB5xC7TNKgZ5iI2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
