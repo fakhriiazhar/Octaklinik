@@ -1,16 +1,68 @@
-# app_octaklinik
+# 🏥 OctaKlinik
 
-A new Flutter project.
+**OctaKlinik** adalah aplikasi mobile berbasis Flutter untuk pencatatan medis pasien pada klinik atau layanan kesehatan skala kecil-menengah. Proyek ini dikembangkan bertujuan untuk mempermudah proses pencatatan, pelacakan, dan pengelolaan data pasien secara digital.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Fitur Utama
 
-A few resources to get you started if this is your first Flutter project:
+### 🔐 Autentikasi
+- Integrasi Firebase Authentication
+- Login dan logout user untuk menjaga keamanan akses aplikasi
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 📝 Formulir Pasien
+- Tambah data pasien baru dengan detail:
+  - Nama
+  - Tanggal Lahir
+  - Jenis Kelamin
+  - Nomor HP
+  - Alamat
+  - Riwayat Medis
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🔍 Pencarian Data Pasien
+- Search bar untuk mencari pasien berdasarkan **nama** atau **ID**
+- Memudahkan pencarian data dalam jumlah besar
+
+### 📅 Pencatatan Kunjungan (Visit)
+- Formulir khusus untuk mencatat setiap kunjungan pasien
+- Kolom keluhan dan keterangan medis yang fleksibel
+
+### ⏱️ Filter Berdasarkan Waktu
+- Filter data berdasarkan:
+  - Hari ini
+  - Minggu ini
+  - Bulan ini
+  - Semua waktu
+- Sistem otomatis me-reset filter jika sudah melewati batas waktunya
+
+### 🛠️ CRUD Data
+- Tambah, edit, dan hapus data **pasien**
+- Tambah, edit, dan hapus data **kunjungan/visit**
+
+---
+
+## 📸 Cuplikan Tampilan
+https://github.com/fakhriiazhar/Octaklinik/tree/main/assets/screenshots
+
+## ⚙️ Teknologi yang Digunakan
+
+- **Flutter** (Frontend Framework)
+- **Firebase Authentication** (User Login)
+- **Sqlite** (Database)
+- **Provider** (State Management)
+- **Custom UI with Material Design**
+
+---
+
+## 🚧 Instalasi & Menjalankan Aplikasi
+
+```bash
+flutter pub get
+flutter run
+```
+
+## ⚠️ File google-services.json tidak disertakan dalam repositori ini karena alasan keamanan. 
+  Silakan tambahkan file tersebut ke direktori android/app/ untuk menjalankan Firebase di perangkat lokal Anda.
+
+## 📄 Lisensi
+Proyek ini bersifat open-source dan bebas digunakan untuk keperluan pembelajaran atau pengembangan lebih lanjut. Silakan fork dan kembangkan sesuai kebutuhan Anda.
