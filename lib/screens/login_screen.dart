@@ -108,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Text(
                         'Hello!',
                         style: TextStyle(
-                          fontSize: 48,
+                          fontSize: 80,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         ),
@@ -116,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Text(
                         'Welcome to OctaKlinik',
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 30,
                           color: Colors.white,
                         ),
                       ),
@@ -143,7 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               const Text(
                                 'Sign in to Your Account',
                                 style: TextStyle(
-                                  fontSize: 24,
+                                  fontSize: 30,
                                   fontWeight: FontWeight.w600,
                                   color: Color(0xFF8BA07E),
                                 ),
