@@ -330,9 +330,7 @@ class _PatientDetailScreenState extends State<PatientDetailScreen> {
         icon: const Icon(Icons.add),
         label: const Text('New Visit'),
         style: ElevatedButton.styleFrom(
-          backgroundColor: Theme.of(context).brightness == Brightness.dark
-              ? Colors.lightBlue
-              : const Color(0xFF8BA07E),
+          backgroundColor: const Color(0xFF8BA07E),
           foregroundColor: Colors.white,
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
           shape: RoundedRectangleBorder(

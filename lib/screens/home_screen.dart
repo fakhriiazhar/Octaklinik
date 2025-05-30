@@ -5,7 +5,6 @@ import 'add_patient_screen.dart';
 import 'patient_detail_screen.dart';
 import 'login_screen.dart';
 import '../helpers/database_helper.dart';
-import '../main.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -214,37 +213,13 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
         ),
         actions: [
-          // Tombol toggle dark mode
-          ValueListenableBuilder<ThemeMode>(
-            valueListenable: globalThemeMode,
-            builder: (context, mode, _) {
-              final iconColor = Theme.of(context).appBarTheme.foregroundColor ??
-                  Theme.of(context).colorScheme.onPrimary;
-              return IconButton(
-                icon: Icon(
-                  mode == ThemeMode.dark ? Icons.dark_mode : Icons.light_mode,
-                  color: mode == ThemeMode.dark ? iconColor : Colors.yellow,
-                ),
-                tooltip: mode == ThemeMode.dark
-                    ? 'Switch to Light Mode'
-                    : 'Switch to Dark Mode',
-                onPressed: () {
-                  globalThemeMode.value =
-                      mode == ThemeMode.dark ? ThemeMode.light : ThemeMode.dark;
-                },
-              );
-            },
-          ),
-          // Avatar profile
           PopupMenuButton<void>(
             offset: const Offset(0, 50),
             child: Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 8.0, horizontal: 10.0),
               child: CircleAvatar(
-                backgroundColor: Theme.of(context).brightness == Brightness.dark
-                    ? Colors.lightBlue
-                    : const Color(0xFF8BA07E),
+                backgroundColor: const Color(0xFF8BA07E),
                 child: Text(
                   _getInitial(),
                   style:
@@ -296,33 +271,16 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).brightness == Brightness.dark
-                    ? Colors.blueGrey[800]
-                    : Colors.grey[200],
+                color: Colors.grey[200],
                 borderRadius: BorderRadius.circular(12),
               ),
               child: TextField(
                 controller: _searchController,
-                style: TextStyle(
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? Colors.white
-                      : Colors.black,
-                ),
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Search by name or ID',
-                  hintStyle: TextStyle(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.grey[400]
-                        : Colors.grey,
-                  ),
-                  prefixIcon: Icon(
-                    Icons.search,
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.grey[400]
-                        : Colors.grey,
-                  ),
+                  prefixIcon: Icon(Icons.search, color: Colors.grey),
                   border: InputBorder.none,
-                  contentPadding: const EdgeInsets.symmetric(
+                  contentPadding: EdgeInsets.symmetric(
                     horizontal: 16,
                     vertical: 12,
                   ),
@@ -418,20 +376,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         style:
                             Theme.of(context).textTheme.headlineSmall?.copyWith(
                                   fontWeight: FontWeight.w600,
-                                  color: Theme.of(context).brightness ==
-                                          Brightness.dark
-                                      ? Colors.white
-                                      : Colors.black87,
+                                  color: Colors.black87,
                                 ),
                       ),
                       const SizedBox(height: 8),
                       Text(
                         'Start by adding your first patient.',
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                              color: Theme.of(context).brightness ==
-                                      Brightness.dark
-                                  ? Colors.white
-                                  : Colors.black54,
+                              color: Colors.black54,
                             ),
                       ),
                     ],
@@ -446,9 +398,7 @@ class _HomeScreenState extends State<HomeScreen> {
         icon: const Icon(Icons.add),
         label: const Text('Add Patient'),
         style: ElevatedButton.styleFrom(
-          backgroundColor: Theme.of(context).brightness == Brightness.dark
-              ? Colors.lightBlue
-              : const Color(0xFF8BA07E),
+          backgroundColor: const Color(0xFF8BA07E),
           foregroundColor: Colors.white,
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
           shape: RoundedRectangleBorder(
@@ -480,16 +430,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildFilterButton(String label) {
     final isSelected = _selectedFilter == label;
-    final isDark = Theme.of(context).brightness == Brightness.dark;
     return ElevatedButton(
       onPressed: () => _onFilterChanged(label),
       style: ElevatedButton.styleFrom(
-        backgroundColor: isSelected
-            ? (isDark ? Colors.lightBlue : const Color(0xFF8BA07E))
-            : (isDark ? Colors.blueGrey[700] : Colors.grey[300]),
-        foregroundColor: isSelected
-            ? Colors.white
-            : (isDark ? Colors.white : Colors.black87),
+        backgroundColor:
+            isSelected ? const Color(0xFF8BA07E) : Colors.grey[300],
+        foregroundColor: isSelected ? Colors.white : Colors.black87,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
