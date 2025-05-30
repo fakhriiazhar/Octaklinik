@@ -120,7 +120,10 @@ class _NewVisitScreenState extends State<NewVisitScreen> {
               ElevatedButton(
                 onPressed: _saveVisit,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF8BA07E),
+                  backgroundColor:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? Colors.lightBlue
+                          : const Color(0xFF8BA07E),
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(
