@@ -305,14 +305,12 @@ class _HomeScreenState extends State<HomeScreen> {
             Text('Total pasien: $_filteredCount',
                 style: const TextStyle(fontWeight: FontWeight.w500)),
             if (_patients.isNotEmpty) ...[
-              Text(
+              const Text(
                 'Latest patient',
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
-                  color: Theme.of(context).brightness == Brightness.dark
-                      ? Colors.white
-                      : Colors.black87,
+                  color: Colors.black87,
                 ),
               ),
               const SizedBox(height: 12),
