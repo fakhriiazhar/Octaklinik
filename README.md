@@ -4,11 +4,14 @@
 
 ---
 
+![Dart](https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white) ![Gradle](https://img.shields.io/badge/Gradle-02303A?logo=gradle&logoColor=white)
+
 ## 🚀 Fitur Utama
 
 ### 🔐 Autentikasi
 - Integrasi Firebase Authentication
 - Login dan logout user untuk menjaga keamanan akses aplikasi
+- Tampilan estetis dengan mode dark yang bisa di switch ke mode light
 
 ### 📝 Formulir Pasien
 - Tambah data pasien baru dengan detail:
