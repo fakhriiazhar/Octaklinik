@@ -11,7 +11,6 @@
 ### 🔐 Autentikasi
 - Integrasi Firebase Authentication
 - Login dan logout user untuk menjaga keamanan akses aplikasi
-- Tampilan estetis dengan mode dark yang bisa di switch ke mode light
 
 ### 📝 Formulir Pasien
 - Tambah data pasien baru dengan detail:
@@ -21,6 +20,7 @@
   - Nomor HP
   - Alamat
   - Riwayat Medis
+- Tampilan estetis dengan mode dark yang bisa di switch ke mode light
 
 ### 🔍 Pencarian Data Pasien
 - Search bar untuk mencari pasien berdasarkan **nama** atau **ID**
